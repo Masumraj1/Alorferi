@@ -54,12 +54,12 @@ class ProductGridView extends StatelessWidget {
 
                         // Show a snackbar to indicate that the product has been added to the cart
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text('Product added to cart successful')));
+                            content: Text('Product added successful')));
                       },
                       child: SizedBox(
                           height: 50,
                           width: 90,
-                          child: Image.asset("assets/add_to_card.png")))
+                          child: Image.asset("assets/add.png")))
                 ],
               ),
             ),

@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
+import '../constant/endpoint.dart';
+import '../constant/urls.dart';
+
 class SellerController extends GetxController {
   var sellers = [].obs;
   var sellerProducts = [].obs;
@@ -28,7 +31,7 @@ class SellerController extends GetxController {
   }
 
   Future<void> getSeller() async {
-    final url = Uri.parse("https://demo.alorferi.com/api/users");
+    final url = Uri.parse("${Urls.apiServerBaseUrl}${Endpoints.users}");
     var response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -42,7 +45,7 @@ class SellerController extends GetxController {
   }
 
   Future<void> sellerProduct(String sellerId) async {
-    final url = Uri.parse("https://demo.alorferi.com/api/users/$sellerId/products");
+    final url = Uri.parse("${Urls.apiServerBaseUrl}${Endpoints.users}$sellerId/products");
     var response = await http.get(url);
 
     if (response.statusCode == 200) {

@@ -11,7 +11,8 @@ class AddToCartProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shopping Cart'),
+        backgroundColor: Colors.black,
+        title: Text('Shopping Cart',style: TextStyle(color: Colors.deepPurpleAccent),),centerTitle: true,
       ),
       body: Padding(
         padding: EdgeInsets.all(14),
@@ -25,9 +26,9 @@ class AddToCartProductPage extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final item = cartItems[index];
                     return Card(
-                      color: Color(0xFFe0f7e2),
+                      color: Colors.white,
                       child: Container(
-                        height: 200,
+                        height: 160,
                         width: double.infinity,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +37,7 @@ class AddToCartProductPage extends StatelessWidget {
                               flex: 5,
                               child: item["url"] == null
                                   ? Image.network(
-                                  "https://demo.alorferi.com/images/blank_product_picture.png")
+                                  "https://e7.pngegg.com/pngimages/344/673/png-clipart-empty-set-null-set-mathematical-notation-set-notation-mathematics-rim-black-and-white.png")
                                   : Image.network("https://demo.alorferi.com${item["url"]}"),
                             ),
 
@@ -45,16 +46,16 @@ class AddToCartProductPage extends StatelessWidget {
                               flex: 5,
                               child: Column(
                                 children: [
-                                  SizedBox(height: 20,),
+                                  SizedBox(height: 10,),
                                   Text(item['name'],style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900),),
                                   Text("price : ৳ ${item['price']}"),
 
-                                  SizedBox(height: 25,),
+                                  SizedBox(height: 10,),
                                   Text("Total Quantity :${item["stock_quantity"]}"),
 
                                   Container(
-                                    color: Colors.white38,
-                                    padding: EdgeInsets.only(left: 24),
+                                    color: Colors.white,
+                                    padding: EdgeInsets.only(left: 10),
                                     child: Row(
                                       children: [
                                         IconButton(onPressed: (){

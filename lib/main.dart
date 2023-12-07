@@ -17,13 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      // Using a ternary operator to conditionally choose the initial page
-       home: FutureBuilder(
+        home: FutureBuilder(
          future: TokenSharePrefences.loadToken(),
          builder: (context, snapshot) {
            if(snapshot.data == null){

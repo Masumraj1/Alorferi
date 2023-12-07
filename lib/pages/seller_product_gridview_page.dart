@@ -69,7 +69,7 @@ class ProductCard extends StatelessWidget {
             Expanded(
               flex: 10,
               child: product["url"] == null
-                  ?  Image.network("https://demo.alorferi.com/images/blank_product_picture.png")
+                  ?  Image.network("https://e7.pngegg.com/pngimages/344/673/png-clipart-empty-set-null-set-mathematical-notation-set-notation-mathematics-rim-black-and-white.png")
                   : Image.network(
                 "https://demo.alorferi.com${product["url"]}",
                 fit: BoxFit.cover,

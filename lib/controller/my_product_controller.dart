@@ -5,12 +5,15 @@ import 'package:alorferi_app_practice/token_shareprefe.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
+import '../constant/endpoint.dart';
+import '../constant/urls.dart';
+
 class MyProductController extends GetxController {
   RxList myProduct = [].obs;
   RxBool isLoading = false.obs;
 
   var loginController = Get.find<LogInController>();
-  static const String apiUrl = "https://demo.alorferi.com/api/my-products";
+  static const String apiUrl = "${Urls.apiServerBaseUrl}${Endpoints.myProduct}";
 
   @override
   void onInit() {

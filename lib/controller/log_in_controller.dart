@@ -3,6 +3,8 @@ import 'package:alorferi_app_practice/token_shareprefe.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import '../constant/endpoint.dart';
+import '../constant/urls.dart';
 import '../pages/home_page.dart';
 
 class LogInController extends GetxController {
@@ -11,7 +13,7 @@ class LogInController extends GetxController {
 
   Future<void> login(String email, String password) async {
     try {
-      final url = "https://demo.alorferi.com/oauth/token";
+      final url = "${Urls.apiServerBaseUrl}${Endpoints.outhToken}";
       var response = await http.post(Uri.parse(url), body: {
         "grant_type": "password",
         "client_id": "2",
