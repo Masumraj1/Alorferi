@@ -25,7 +25,9 @@ class AllProductGridViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _textFieldController=TextEditingController();
     return Scaffold(
+
       body: Obx(() {
         if (productController.isLoading.value &&
             productController.currentPage == 1) {
@@ -55,7 +57,9 @@ class AllProductGridViewPage extends StatelessWidget {
             },
           );
         }
-      }),
+      })
+
+
     );
   }
 }
