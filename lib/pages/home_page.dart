@@ -1,3 +1,5 @@
+import 'package:alorferi_app_practice/pages/log_in_page.dart';
+import 'package:alorferi_app_practice/token_shareprefe.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/add_to_card_controller.dart';
@@ -115,6 +117,10 @@ class _HomePageState extends State<HomePage>
                   title: Text("Settings",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                 ),
                 ListTile(
+                  onTap: ()async{
+                    Get.to(LogInPage());
+                    TokenSharePrefences.logout();
+                  },
                   title: Text("LogOut",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                 ),
               ],

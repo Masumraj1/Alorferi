@@ -59,3 +59,43 @@ class AddToCartController extends GetxController {
     return total;
   }
 }
+
+
+// import 'package:get/get.dart';
+//
+// class AddToCartController extends GetxController {
+//   RxList cartItems = [].obs;
+//
+//   @override
+//   void onInit() {
+//     super.onInit(); // Always call super.onInit() first
+//
+//     // TODO: Initialize your controller here
+//     addToCart({'id': '1', 'price': 10.0}); // Example: You should pass a product map here
+//     removeFromCart({'id': '1', 'price': 10.0}); // Example: You should pass a product map here
+//     getTotalAmount();
+//   }
+//
+//   void addToCart(Map<String, dynamic> product) {
+//     // Your existing implementation
+//     refresh(); // Refresh the UI
+//   }
+//
+//   void removeFromCart(Map<String, dynamic> product) {
+//     // Your existing implementation
+//     refresh(); // Refresh the UI
+//   }
+//
+//   void clearCart() {
+//     cartItems.clear();
+//     refresh(); // Refresh the UI
+//   }
+//
+//   double getTotalAmount() {
+//     double total = 0;
+//     for (var item in cartItems) {
+//       total += item["price"] * item["quantity"];
+//     }
+//     return total;
+//   }
+// }

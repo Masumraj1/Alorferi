@@ -43,16 +43,18 @@ class LogInPage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                TextField(
-                  controller: passwordController,
-                  decoration: InputDecoration(
-                      label: Text(
-                        "Enter you password",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(13))),
-                ),
+            TextFormField(
+              controller: passwordController,
+              decoration: InputDecoration(
+                  labelText: 'User Password',
+                  hintText: "Enter Your password",
+                  labelStyle: TextStyle(fontSize: 16,color: Colors.white),
+                  border: OutlineInputBorder(),
+                  suffixIcon: Icon(Icons.chevron_right)),
+              obscureText: true,
+              obscuringCharacter: "*",
+              keyboardType: TextInputType.text,
+            ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

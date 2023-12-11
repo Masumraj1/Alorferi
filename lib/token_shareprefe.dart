@@ -19,7 +19,7 @@ class TokenSharePrefences {
 
 
 
-  Future<void> logout() async {
+  static Future<void> logout() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.remove('token');
   }
